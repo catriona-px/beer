@@ -1,9 +1,6 @@
-Half Pint vs Full Pint: The Burning Question 
+Pint or Half: A Computational Approach to a Heated Pub Debate
 
 Ever wondered if the size of your beer glass affects how quickly your drink warms up? So did we. 
-What's This Madness? 
-
-A computational exploration into beer thermodynamics, because apparently, we have nothing better to do.
 
 Features 
 
@@ -33,7 +30,7 @@ A matplotlib plot showing:
      Average temperatures
 
 Disclaimer 
-Science may have been harmed in the making of this project. Beer was definitely consumed. 
+Beer was consumed in the making of this project. Do not trust us.
 
 Contributions 
-PRs welcome... Bring beer and a thermometer.
+PRs welcome... Bring a thermometer.
