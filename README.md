@@ -1,13 +1,9 @@
 # 🍺 Pint or Half? A Computational Approach to a Heated Pub Debate
 
-This repo contains the code for our aims of exploring a simple but surprisingly loaded question:  
-**Does a half pint of beer stay colder than a full pint?**
-
-We took it personally — and computationally.
-
+This repo contains the code for our aims of exploring a simple but loaded question: Half or Pint? Which stays colder...
 ---
 
-## ✅ What It Does
+## What It Does
 
 - Simulates how the beer temperature evolves in a pint or half pint over time
 - Includes conduction from the ambient air
@@ -18,7 +14,7 @@ We took it personally — and computationally.
 
 ---
 
-## 🧮 What's in the Model
+## What's in the Model
 
 The model is run via `simulate_warming_with_conduction`, and includes:
 
@@ -37,17 +33,17 @@ The simulation runs with small time steps (default: 0.0001 minutes = 0.006 s) fo
 
 ---
 
-## 📈 Output
+## Output
 
 After 30 minutes of simulated pub time (or more, if you're that way inclined), you'll get:
 
-- 📊 A plot showing:
+- A plot showing:
   - Temperature curves for both pint and half pint
   - Corresponding average temperatures
   - Total "pints" consumed over time
 - Optional: fine-grain insight from returned variables (volumes, heights, temperature arrays)
 
-You can tweak the consumption function to experiment with behaviour changes (e.g. drink warmer beer faster or slower, drink less if the beer gets bad, etc.)
+You can adjust the consumption function to experiment with behaviour changes (e.g. drink warmer beer faster or slower, drink less if the beer gets bad, etc.)
 
 ---
 
