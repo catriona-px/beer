@@ -1,36 +1,58 @@
-Pint or Half: A Computational Approach to a Heated Pub Debate
+# 🍺 Pint or Half? A Computational Approach to a Heated Pub Debate
 
-Ever wondered if the size of your beer glass affects how quickly your drink warms up? So did we. 
+This repo contains the code for our aims of exploring a simple but surprisingly loaded question:  
+**Does a half pint of beer stay colder than a full pint?**
 
-Features 
+We took it personally — and computationally.
 
-     🧊 Simulates beer temperature evolution
-     👋 Accounts for hand temperature
-     🌡️ Considers ambient air conditions
-     📊 Compares half pints vs full pints
-     
-Our model considers: 
+---
 
-     Surface area to volume ratio
-     Heat transfer coefficients
-     Consumption rate variations
-     Glass thermal conductivity
+## ✅ What It Does
 
-Key Parameters 
+- Simulates how the beer temperature evolves in a pint or half pint over time
+- Includes conduction from the ambient air
+- Accounts for contact heating from your hand (based on surface area and assumed temperature)
+- Adjusts how fast you're drinking depending on how warm the beer is
+- Calculates cumulative consumption and average temperatures
+- Produces clear plots comparing full and half pints
 
-     Initial beer temperature
-     Ambient temperature
-     Hand temperature
- 
-What You'll Get 
-A matplotlib plot showing: 
+---
 
-     Temperature evolution of half pint vs full pint
-     Cumulative pints consumed
-     Average temperatures
+## 🧮 What's in the Model
 
-Disclaimer 
-Beer was consumed in the making of this project. Do not trust us.
+The model is run via `simulate_warming_with_conduction`, and includes:
 
-Contributions 
-PRs welcome... Bring a thermometer.
+| Parameter                   | Description                                     |
+|----------------------------|-------------------------------------------------|
+| `T_initial`                | Beer starting temperature (default 4°C)         |
+| `T_air`                    | Air temperature (default 30°C)                  |
+| `T_hand`                   | Hand temperature (default 37°C)                 |
+| `heat_transfer_coefficient`| Convective heat transfer from air               |
+| `heat_transfer_coefficient_hand` | Convective heat transfer from hand     |
+| `glass_thermal_conductivity`| Conductive heating through glass               |
+| `glass_thickness`          | Wall thickness of the glass                     |
+| `consumption_rate_function`| Variable drinking speed, depending on beer temp|
+
+The simulation runs with small time steps (default: 0.0001 minutes = 0.006 s) for better accuracy.
+
+---
+
+## 📈 Output
+
+After 30 minutes of simulated pub time (or more, if you're that way inclined), you'll get:
+
+- 📊 A plot showing:
+  - Temperature curves for both pint and half pint
+  - Corresponding average temperatures
+  - Total "pints" consumed over time
+- Optional: fine-grain insight from returned variables (volumes, heights, temperature arrays)
+
+You can tweak the consumption function to experiment with behaviour changes (e.g. drink warmer beer faster or slower, drink less if the beer gets bad, etc.)
+
+---
+
+## 📎 Requirements
+
+- Python 3.x
+- `numpy`
+- `matplotlib`
